@@ -1,0 +1,45 @@
+﻿@using turboaz.Models
+@model List<User>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/css/StyleSheet.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id:</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>position</th>
+                <th>delete</th>
+                <th>Block</th>
+            </tr>
+
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tbody>
+                <tr>
+                    <td>@item.UserId</td>
+                    <td>@item.UserName</td>
+                    <td>@item.UserSurname</td>
+                    <td>@item.UserDescription</td>
+                    <td><a href="/Home/IstifadeciRemove/@item.UserId"><i class="fa-solid fa-trash"></i></a> </td>
+                    <td><a href="/User/Block/@item.UserId">@(item.UserActive=="block"?"Active":"Block")</a></td>
+                </tr>
+            </tbody>
+        }
+    </table>
+
+</body>
+</html>

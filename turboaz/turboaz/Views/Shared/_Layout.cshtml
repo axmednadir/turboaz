@@ -1,0 +1,126 @@
+﻿@using System.Security.Claims;
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/StyleSheet.css">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-first">
+            <div class="first-left">
+                <a href="#">Tap.az</a>
+                <a href="#">Bina.az</a>
+                <a href="#">Boss.az</a>
+            </div>
+            <div class="first-right">
+                <span>Dəstək:</span>
+                <a class="number" href="">(055) 838-83-63</a>
+                <a href="">Yardim</a>
+                <a href="">Seçilmişlər</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+
+                    <a href="/Home/Myprofile/@User.FindFirst(ClaimTypes.Sid).Value">
+                        <span>@User.FindFirst(ClaimTypes.Name).Value</span>
+                    </a>
+                    <a href="/User/Cixis">Çıxış </a>
+
+                }
+                else
+                {
+                    <a href="/User/Login">Giriş</a>
+                }
+            </div>
+        </div>
+        <div class="navbar-end">
+            <div class="end-left">
+                @if (@User.Identity.IsAuthenticated)
+                {
+                    if (User.FindFirst(ClaimTypes.Name).Value == "Celil")
+                    {
+                        <a href="/Home/Index">TURBO.AZ</a>
+                        <a href="/Home/Index">Bütün elanlar</a>
+                        <a href="">Avtosalonlar</a>
+                        <a href="">Moto</a>
+                        <a href="">Ehtiyat hissələr və aksesuarlar</a>
+                        <a href="/home/tesdiqlenmeyen">Tesdiq Gözləyən</a>
+                        <a href="/home/Istifadeci">Istifadeciler</a>
+                    }
+                    else
+                    {
+                        <a href="/Home/Index">TURBO.AZ</a>
+                        <a href="/Home/Index">Bütün elanlar</a>
+                        <a href="">Avtosalonlar</a>
+                        <a href="">Moto</a>
+                        <a href="">Ehtiyat hissələr və aksesuarlar</a>
+                    }
+
+                }
+                else
+                {
+                    <a href="/Home/Index">TURBO.AZ</a>
+                    <a href="/Home/Index">Bütün elanlar</a>
+                    <a href="">Avtosalonlar</a>
+                    <a href="">Moto</a>
+                    <a href="">Ehtiyat hissələr və aksesuarlar</a>
+                }
+            </div>
+
+            <div class="end-right">
+                @if (User.Identity.IsAuthenticated )
+                {
+                    @if (User.FindFirst("Status").Value == "active")
+                    {
+                        <a href="/Home/Add">Yeni elan</a>
+                    }
+                    else
+                    {
+                        <a href="/Home/Index">Yeni elan</a>
+                    }
+
+                }
+                else
+                {
+                    <a href="/User/Login">Yeni elan</a>
+
+                }
+            </div>
+        </div>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="footer-first">
+            <a href="">Qaydalar</a>
+            <a href="">Qanun</a>
+            <a href="">İstifadəçi razılaşması</a>
+            <a href="">Məxfilik siyasəti</a>
+        </div>
+        <div class="footer-end">
+            <div class="footer-left">
+                <p>Saytın Administrasiyası reklam bannerlərinin və yerləşdirilmiş elanların məzmununa görə məsuliyyət daşımır.</p>
+            </div>
+            <div class="footer-right">
+                <p>2006-2023 Digital Classifieds MMC. VÖEN: 1405631661</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/JavaScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+@using turboaz.Models
+@model Car
+
+<section class="product-description">
+    <div class="description-product">
+        <div class="vip-title">
+
+            <span>MARKA<span>,      @Model.CarIl il</span> </span>
+        </div>
+        <div class="desc-product">
+
+            <div class="products-sekil">
+                <div class="yuxari">
+                    <img src="/img/@Model.Photos.FirstOrDefault().PhotoUrl">
+                </div>
+
+                    <div class="asagi">
+                @foreach (var item in Model.Photos)
+                {
+                        <img src="/img/@item.PhotoUrl">
+                }
+                    </div>
+                @*    <div class="sekilinfo">
+                <div class="infoqiy">
+                <h1> @Model.CarQiy <span>AZN</span> </h1>
+                </div>
+                <div class="infosalon">
+                <h3>@Model.CarUsername</h3>
+                <p>@Model.CarSeher</p>
+                </div>
+                <div class="infonomre">
+                <a href="">Zeng et</a>
+                </div>
+                <div class="infovip">
+                <div class="infovips">
+                <h5>İrəli çək</h5>
+                <p>3 AZN-den</p>
+                </div>
+                <div class="infovips">
+                <h5>Vip Et</h5>
+                <p>3 AZN-den</p>
+                </div> <div class="infovips">
+                <h5>Premium</h5>
+                <p>3 AZN-den</p>
+                </div>
+                </div>
+
+                </div>*@
+
+            </div>
+        </div>
+    </div>
+    <div class="infodesc">
+        <div class="infodescs">
+            <div class="infoseher">   <span>Şəhər</span></div>
+            <div class="infoc">   <span>@Model.CarSeher</span></div>
+        </div>
+        <div class="infodescs">
+            <div class="infoseher">   <span>Marka</span></div>
+            <div class="infoc">   <span>Marka</span></div>
+        </div>
+        <div class="infodescs">
+            <div class="infoseher">   <span>Model</span></div>
+            <div class="infoc">   <span>@Model.CarModel</span></div>
+        </div>
+        <div class="infodescs">
+            <div class="infoseher">   <span>Buraxılış ili</span></div>
+            <div class="infoc">   <span>@Model.CarIl</span></div>
+        </div>
+    </div>
+    <div class="infodescr">
+        <span>@Model.CarDesciption</span>
+    </div>
+
+</section>

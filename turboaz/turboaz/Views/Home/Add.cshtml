@@ -1,0 +1,70 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+@using turboaz.Models
+@model Car
+
+<div class="elanyerlestir">
+    <div class="elan-ust">
+        <h3>ELAN YERLƏŞDİRMƏK</h3>
+    </div>
+    <div class="elanalt">
+        <div class="elanmelumat">
+            <ul>
+                <li>Üç ay ərzində bir nəqliyyat vasitəsi yalnız bir dəfə pulsuz dərc oluna bilər.</li>
+                <li>Üç ay ərzində təkrar və ya oxşar elanlar (marka/model, rəng) ödənişlidir.</li>
+                <li>Elanınızı saytın ön sıralarında görmək üçün "İrəli çək" xidmətindən istifadə edin.</li>
+            </ul>
+        </div>
+        <form action="/Home/Add" method="post" enctype="multipart/form-data">
+            <div class="elanlist">
+
+                <div class="elanlistsol">
+                    <span>Marka</span>
+                    <select name="carcategoryMarkaId">
+                        @foreach (var item in ViewBag.Category)
+                        {
+                            <option value="@item.CategoryMarkaId">@item.CategoryMarkaName</option>
+
+                        }
+                    </select>
+
+
+                </div>
+                <div class="elanlistsag">
+                    <span>Model</span>
+                    <input type="text" name="carModel">
+                </div>
+            </div>
+            <div class="elanlist2">
+                <div class="elanlistorta">
+                    <span>Seher</span>
+                    <input type="text" name="carSeher">
+                </div>
+
+                <div class="elanlistsag1">
+                    <span>Il</span>
+                    <input type="number" name="carIl">
+                    <span class="elanlistsag3">qiymet</span>
+                    <input type="number" name="carQiy">
+                </div>
+            </div>
+            <div class="elanlistsekil">
+                <span>Şəkillər</span>
+                <input type="file" name="carImg" multiple id="CarPhotoSelect" >
+
+                <div class="row photoarea">
+
+      
+
+                </div>
+            </div>
+            <div class="elanad"> <span>Adınız </span> <input type="text" name="carUsername"></div>
+            <div class="elanlist3">
+                <span>Əlavə məlumat</span>
+                <textarea name="carDesciption" cols="89" rows="5"></textarea>
+            </div>
+            <div class="elanbuton"> <button>Elave et</button> </div>
+        </form>
+    </div>
+</div>

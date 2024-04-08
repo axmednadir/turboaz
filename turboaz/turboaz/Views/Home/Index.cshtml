@@ -1,0 +1,95 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+@using turboaz.Models;
+@model List<Car>
+<section class="source">
+    <div class="source-input">
+        <form action="/Home/Index">
+            <div class="input-first">
+                <input type="text" placeholder="Model" name="model">
+                <input type="text" placeholder="Şəhər" name="seher">
+            </div>
+            <div class="input-end">
+                <div class="input-left">
+                    <input type="text" placeholder="İl-min" name="minyear">
+                    <input type="text" placeholder="İl-max" name="maxyear">
+                </div>
+                <div class="input-right">
+                    <input class="qiymet" type="text" placeholder="qiymət-min" name="minprice">
+                    <input class="qiymet" type="text" placeholder="qiymət-max" name="maxprice">
+                </div>
+
+            </div>
+            <button class="axtar">Axtar</button>
+        </form>
+    </div>
+
+
+
+</section>
+<!-- ///////////////////////////Section-Product//////////////////////////////////// -->
+<section class="product-vip">
+    <div class="vip">
+        <div class="vip-title">
+            <span>BÜTÜN ELANLAR</span>
+        </div>
+        <div class="vip-product">
+            @foreach (var item in Model)
+            {
+                <div class="vip-products @item.CarcategoryMarkaId">
+
+                    <div class="vip-photo">
+                        <img src="/img/@item.Photos.FirstOrDefault().PhotoUrl">
+                    </div>
+                    <div class="vip-description">
+                        <p class="p-qiymet"> <strong><span>@item.CarQiy</span> <span>AZN</span></strong> </p>
+                        <p>
+
+                            <span>
+                               @item.CarcategoryMarka.CategoryMarkaName
+                            </span>
+
+                            <span> @item.CarModel</span>
+                        </p>
+                        <p>@item.CarIl</p>
+                        <p class="p-tarix">@item.CarSeher</p>
+                    </div>
+                    <a href="/Home/Readmore/@item.CarId">readmore</a>
+                    <a href="/Home/Edit/@item.CarId">Edit</a>
+                    <a href="/Home/Remove/@item.CarId">Remove</a>
+                </div>
+            }
+        </div>
+    </div>
+    
+    <ul class="pagination justify-content-center my-3">
+        @{
+
+            int pg = !string.IsNullOrEmpty(Context.Request.Query["page"]) ? int.Parse(Context.Request.Query["page"]) : 0;
+        }
+          <li class="page-item @(pg==0 ? "disabled" : "")">
+            <a class="page-link" href="?page=@(pg-1)" tabindex="-1" aria-disabled="true">Previous</a>
+        </li>
+        @for (int i = 0; i < ViewBag.PageCount; i++)
+        {
+            <li class="page-item @(pg == i ? "active" : "" )"><a class="page-link" href="?page=@i">@(
+                i+1
+                )</a></li>
+
+        }
+        <li class="page-item @(pg==(ViewBag.PageCount-1) ? "disabled" : "")">
+            <a class="page-link" href="?page=@(pg+1)">Next</a>
+        </li>
+    </ul>
+</section>
+<!-- ///////////////////////////category//////////////////////////////////// -->
+<section class="category">
+    <div class="category-list">
+        @foreach (var item in ViewBag.Category)
+        {
+            <a cat="@item.CategoryMarkaId" href="#">@item.CategoryMarkaName</a>
+
+        }
+    </div>
+</section>

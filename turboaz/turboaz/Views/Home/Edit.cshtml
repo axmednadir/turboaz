@@ -1,0 +1,71 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+@using turboaz.Models
+@model Car
+
+<div class="elanyerlestir">
+    <div class="elan-ust">
+        <h3>DÜZƏLİŞ ET</h3>
+    </div>
+    <div class="elanalt">
+        <div class="elanmelumat">
+            <ul>
+                <li>Bir ay ərzində bir nəqliyyat vasitəsinə yalnız bir dəfə düzəliş oluna bilər.</li>
+                <li>Bir ay ərzində təkrar düzəliş etmək ödənişlidir.</li>
+                <li>Elanınızı saytın ön sıralarında görmək üçün "İrəli çək" xidmətindən istifadə edin.</li>
+            </ul>
+        </div>
+        <form action="/Home/Edit/@Model.CarId" method="post" enctype="multipart/form-data">
+            <div class="elanlist">
+
+                @* <div class="elanlistsol">
+                <span>Marka</span>
+                <select name="carcategoryMarkaId">
+                <option value="@Model.CarcategoryMarkaId">@ViewBag.CategoryMarkaName</option>
+                </select>
+
+
+
+                </div>*@
+                <div class="elanlistsag">
+                    <span>Model</span>
+                    <input type="text" name="CarModel" value="@Model.CarModel">
+                </div>
+            </div>
+            <div class="elanlist2">
+                <div class="elanlistorta">
+                    <span>Seher</span>
+                    <input type="text" name="CarSeher" value="@Model.CarSeher">
+                </div>
+                <div class="elanlistsag1">
+                    <span>Il</span>
+                    <input type="text" name="CarIl" value="@Model.CarIl">
+                    <span class="elanlistsag3">qiymet</span>
+                    <input type="text" name="CarQiy" value="@Model.CarQiy">
+                </div>
+            </div>
+            <div class="elanlistsekil">
+                <span>Şəkillər</span>
+                <input type="file" name="CarImg" >
+            </div>
+            <div class="row">
+                @foreach (var item in Model.Photos)
+                {
+                    <div class="col-2">
+                        <a href="/Home/DeleteImg/@item.PhotoId">
+                            <img class="w-100" src="/img/@item.PhotoUrl" />
+                        </a>
+                    </div>
+                }
+
+            </div>
+            <div class="elanad"> <span>Adınız </span> <input type="text" name="carUsername" value="@Model.CarUsername"></div>
+            <div class="elanlist3">
+                <span>Əlavə məlumat</span>
+                <textarea name="CarDesciption" cols="89" rows="5" value="@Model.CarDesciption">@Model.CarDesciption</textarea>
+            </div>
+            <div class="elanbuton"> <button>Duzelis et</button> </div>
+        </form>
+    </div>
+</div>

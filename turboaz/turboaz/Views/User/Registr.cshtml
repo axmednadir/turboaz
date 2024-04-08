@@ -1,0 +1,36 @@
+﻿@using turboaz.Models;
+@model User;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/StyleSheet.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="login">
+
+        <div class="logininfo">
+            <form action="/User/Registr" method="post">
+                <h1> <a href="/home/Index"> TURBO.AZ</a></h1>
+                <p>Öz elanlarınıza baxmağın, onları redaktə və bərpa etməyin rahat yolu</p>
+                <input type="text" placeholder="username" asp-for="UserName">
+                <input type="text" placeholder="usersurname" asp-for="UserSurname">
+                <input type="password" placeholder="password" asp-for="UserPassword">
+                <button class="giris">Qeydiyyat Ol</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script src="/js/JavaScript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,674 @@
+﻿* {
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+    text-decoration: none!important;
+    outline: none;
+}
+
+.navbar-first {
+    width: 100%;
+    padding: 10px 100px;
+    margin: auto;
+    background-color: #f6f7fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .navbar-first a {
+        margin-left: 20px;
+        color: #8d94ad
+    }
+
+.number {
+    color: black !important;
+}
+
+.navbar-end {
+    width: 100%;
+    padding: 20px 100px;
+    margin: auto;
+    background-color: #ca1016;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .navbar-end a {
+        margin-left: 20px;
+        color: white;
+        font-size: 18px;
+    }
+
+.end-right a {
+    background-color: #7ed321;
+    padding: 10px 10px;
+    border-radius: 0.2cm;
+}
+
+.source {
+    width: 70%;
+    display: flex;
+    margin: auto;
+    background-color: #ebedf3;
+}
+
+    .source input {
+        border-radius: 0.2cm;
+        border: 1px solid #cbced6;
+        padding-left: 5px;
+    }
+
+.source-input {
+    width: 100%;
+    padding: 13px 0px;
+}
+
+.input-first {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+    .input-first input {
+        width: 20%;
+        height: 35px;
+        margin-left: 10px;
+    }
+
+.input-end {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-left {
+    width: 50%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.input-right {
+    width: 50%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.input-left input {
+    width: 10%;
+    height: 35px;
+}
+
+.input-right input {
+    width: 17%;
+    height: 35px;
+}
+
+.product-vip {
+    width: 70%;
+
+    margin: auto;
+    background-color: #f1f3f7;
+}
+
+.vip {
+    width: 100%;
+}
+
+.vip-title {
+    width: 100%;
+    padding: 13px 15px;
+    background-color: #f1f3f7;
+    font-size: 28px;
+    text-align:center;
+}
+
+.vip-product {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    background-color: #f6f7fa;
+    justify-content: space-around;
+}
+
+.vip-products {
+    width: 31%;
+    margin: 10px 0px;
+    background-color: #fff;
+    border-radius: 0.2cm;
+    padding-bottom: 10px;
+}
+
+.vip-photo img {
+    width: 100%;
+    height: 291.84px;
+    border-radius: 0.2cm 0.2cm 0px 0px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.vip-description {
+    padding-left: 10px;
+}
+
+.p-qiymet {
+    font-size: 20px;
+}
+
+.p-tarix {
+    color: #8d94ad;
+}
+
+.footer-first {
+    width: 100%;
+    padding: 10px 165px;
+    margin: auto;
+    background-color: #f6f7fa;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #8d94ad;
+}
+
+    .footer-first a {
+        margin-left: 40px;
+        color: black;
+    }
+
+.footer-end {
+    width: 100%;
+    display: flex;
+    background-color: #ca1016;
+    justify-content: space-between;
+    padding: 15px 205px;
+}
+
+    .footer-end p {
+        color: #fff;
+    }
+
+.footer-left {
+    width: 40%;
+}
+
+.category {
+    width: 100%;
+}
+
+.category-list {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f1f3f7;
+    border-top: 1px solid #8d94ad;
+    padding: 10px 0px;
+}
+
+    .category-list a {
+        margin-left: 30px;
+        color: #8d94ad;
+    }
+
+.vip-products a {
+    padding: 10px 10px;
+    color: #ca1016;
+}
+
+.elanyerlestir {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.elan-ust {
+    width: 75%;
+    margin: auto;
+    background-color: #f1f3f7;
+    padding: 20px 40px;
+}
+
+.elanalt {
+    width: 75%;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.elanmelumat {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.elanlist {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.elanlist2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.elanlistsekil {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+    .elanlistsekil input {
+        width: 50%;
+        padding: 4px 0px;
+        margin-left: 40px;
+    }
+
+.elanlist3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.elanlistsol select {
+    width: 48%;
+    padding: 4px 0px;
+}
+
+.elanlist3 textarea {
+    resize: vertical;
+    margin-left: 40px;
+}
+
+.elanlistsol {
+    width: 45%;
+}
+
+.elanlistsag {
+    width: 44%;
+    margin-left: 89px;
+}
+
+.elanlistsag1 {
+    width: 48%;
+}
+
+.elanlistorta {
+    width: 44%;
+}
+
+.elanlist input {
+    width: 55%;
+    padding: 4px 0px;
+}
+
+.elanlistorta input {
+    width: 50%;
+    padding: 4px 0px;
+    margin-left: 12px;
+}
+
+.elanlistsag1 input {
+    width: 26%;
+    padding: 4px 0px;
+}
+
+.elanlist span {
+    margin-right: 49px;
+}
+
+.elanlist2 span {
+    margin-right: 40px;
+}
+
+.elanlistsag3 {
+    margin-left: 40px;
+}
+
+.elanbuton {
+    width: 100%;
+    display: flex;
+}
+
+.elanad {
+    width: 44%;
+    margin-bottom: 50px;
+}
+
+    .elanad span {
+        margin-right: 44px;
+    }
+
+    .elanad input {
+        width: 50%;
+        padding: 4px 0px;
+    }
+
+.elanbuton button {
+    padding: 10px 40px;
+    margin: auto;
+    background-color: #ca1016;
+    border-radius: 0.2cm;
+    border: none;
+    color: white;
+}
+
+.product-description {
+    width: 100%;
+}
+
+.description-product {
+    width: 70%;
+    margin: auto;
+    background-color: #f1f3f7;
+}
+
+.products-sekil {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.yuxari {
+    width: 100%;
+    margin: auto;
+    height: 400px;
+    text-align: center;
+    padding: 30px 0px;
+}
+.yuxari img{
+    width:50%;
+    height:350px;
+    object-fit:scale-down;
+}
+.asagi {
+    width: 100%;
+    margin: 50px auto;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+    .asagi img {
+        width: 20%;
+        height: 150px;
+        object-fit: cover;
+    }
+.sekil {
+    width: 660px;
+    height: 440px;
+}
+
+    .sekil img {
+        width: 660px;
+        height: 440px;
+        object-fit: contain;
+    }
+
+.desc-product {
+    margin-left: 18px;
+}
+
+.sekilinfo {
+    width: 27%;
+    background-color: #bbbec5;
+    margin-left: 1%;
+}
+
+.infoqiy {
+    margin: 10px 0px 10px 0px;
+    border-bottom: 1px solid #9b9fa7;
+    padding-bottom: 20px;
+}
+
+    .infoqiy h1 {
+        margin-left: 20px;
+    }
+
+.infosalon {
+    margin-left: 20px;
+    margin-bottom: 100px;
+}
+
+    .infosalon p {
+        color: #9b9fa7;
+    }
+
+.infonomre {
+    width: 100%;
+    display: flex;
+}
+
+    .infonomre a {
+        background-color: #3db460;
+        padding: 20px 80px;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+        border-radius: 0.2cm;
+        color: white;
+    }
+
+.infovip {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.infovips {
+    width: 30%;
+    border: 1px solid #9b9fa7;
+    padding: 10px 5px;
+    border-radius: 0.2cm;
+}
+
+    .infovips p {
+        color: blue;
+        font-size: 12px;
+    }
+
+.infodesc {
+    width: 70%;
+    background-color: white;
+    margin: auto;
+    border-top: 1px solid #95989d;
+    border-bottom: 1px solid #95989d;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.infodescs {
+    width: 36%;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.infoc {
+    padding-right: 120px;
+}
+
+.infoseher {
+    color: #95989d;
+}
+
+.infodescr {
+    width: 70%;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+    .infodescr span {
+        margin-bottom: 20px;
+    }
+
+.login {
+    width: 100%;
+    height: 100vh;
+    background-color: #f1f3f7;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logininfo {
+    width: 30%;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+    .logininfo input {
+        width: 70%;
+        padding: 6px 4px;
+        margin-top: 10px;
+    }
+
+    .logininfo p {
+        margin: 20px 0px 30px 0px;
+        color: #9b9fa7;
+    }
+
+    .logininfo .giris {
+        width: 40%;
+        margin-top: 20px;
+        padding: 15px 0px;
+        background-color: #4b8af9;
+        border-radius: 0.2cm;
+        color: white;
+        border: none;
+    }
+
+td {
+    padding: 5px 50px 5px 0px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+th {
+    padding: 5px 50px 5px 0px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+
+table {
+    margin: 50px auto;
+    border-collapse: collapse;
+    position: absolute;
+}
+
+tbody tr:nth-child(even) {
+    background-color: gray;
+}
+
+
+
+
+.elanlarim {
+    width: 100%;
+}
+
+.myelan {
+    width: 70%;
+    margin: auto;
+    background-color: #ebeded;
+    padding-top: 10px;
+}
+
+.myelantitle {
+    width: 90%;
+    margin: 10px auto;
+    background-color: white;
+}
+
+    .myelantitle p {
+        font-size: 20px;
+        padding: 10px 10px;
+    }
+
+.elanyerleri {
+    width: 100%;
+    margin: 20px auto;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #9b9fa7;
+}
+
+    .elanyerleri a {
+        margin-right: 30px;
+    }
+
+.avtoelan {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content:center;
+    padding-left: 10px;
+}
+
+.avtoelans {
+    width: 24%;
+    margin: 10px 10px 10px 0px;
+    background-color: #fff;
+    border-radius: 0.2cm;
+}
+
+    .avtoelans a {
+        margin-left: 10px;
+    }
+
+.avtofoto img {
+    width: 100%;
+    height: 162px;
+    border-radius: 0.2cm 0.2cm 0px 0px;
+    object-fit:cover;
+    overflow: hidden;
+}
+
+.aftodescription {
+    padding-left: 10px;
+}
+.axtar {
+    padding: 15px 40px;
+    float: right;
+    margin-right: 25px;
+    background-color: #ca1016;
+    color:white;
+    border:none;
+    border-radius:0.2cm;
+}
+.ana {
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+
+.item input {
+    display:none;
+}
+.photoarea img {
+    width: 300px!important;
+    height: 200px;
+}

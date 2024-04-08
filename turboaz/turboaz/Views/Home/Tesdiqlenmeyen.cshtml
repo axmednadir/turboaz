@@ -1,0 +1,78 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+@using turboaz.Models
+@model List<Car>
+<section class="source">
+    <div class="source-input">
+        <div class="input-first">
+            <input type="text" placeholder="Marka">
+            <input type="text" placeholder="Model">
+            <input type="text" placeholder="Şəhər">
+        </div>
+        <div class="input-end">
+            <div class="input-left">
+                <input type="text" placeholder="İl-min">
+                <input type="text" placeholder="İl-max">
+            </div>
+            <div class="input-right">
+                <input class="qiymet" type="text" placeholder="qiymət-min">
+                <input class="qiymet" type="text" placeholder="qiymət-max">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ///////////////////////////Section-Product//////////////////////////////////// -->
+<section class="product-vip">
+    <div class="vip">
+        <div class="vip-title">
+            <span>VIP ELANLAR</span>
+        </div>
+        <div class="vip-product">
+            @foreach (var item in Model)
+            {
+                <div class="vip-products @item.CarcategoryMarkaId">
+
+                    <div class="vip-photo">
+                        <img src="/img/@item.Photos.FirstOrDefault().PhotoUrl">
+                    </div>
+                    <div class="vip-description">
+                        <p class="p-qiymet"> <strong><span>@item.CarQiy</span> <span>AZN</span></strong> </p>
+                        <p>
+
+                            <span>
+                                Marka
+                            </span>
+
+                            <span> @item.CarModel</span>
+                        </p>
+                        <p>@item.CarIl</p>
+                        <p class="p-tarix">@item.CarSeher</p>
+                        <p> @item.CarTestiq </p>
+
+                    </div>
+                    <a href="/Home/Edit/@item.CarId">Edit</a>
+                    <a href="/Home/Readmore/@item.CarId">Readmore</a>
+                    <a href="/Home/Remove/@item.CarId">Remove</a>
+                    <a href="/Home/Tesdiqle/@item.CarId">Tesdiqle</a>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<!-- ///////////////////////////category//////////////////////////////////// -->
+<section class="category">
+    <div class="category-list">
+        @foreach (var item in Model)
+        {
+            <a cat="@item.CarcategoryMarkaId" href="#">Marka</a>
+
+        }
+
+
+
+    </div>
+</section>
